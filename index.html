@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Facebook Media Uploader</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="theme-toggle">
+    <button id="themeToggle">
+      <i class="fas fa-sun"></i>
+    </button>
+  </div>
+  
+  <div class="hero-section">
+    <h1>Facebook Media Uploader</h1>
+    <p>Upload your reels, videos, and images directly to Facebook Pages with ease!</p>
+  </div>
+
+  <div class="info-section">
+    <div class="info-card">
+      <i class="fas fa-info-circle"></i>
+      <h3>What is this?</h3>
+      <p>A simple tool to help you schedule and upload media content to your Facebook Page automatically.</p>
+    </div>
+    <div class="info-card">
+      <i class="fas fa-question-circle"></i>
+      <h3>How to Use</h3>
+      <p>1. Enter your Page ID and Access Token<br>
+         2. Select media type (Reel/Video/Image)<br>
+         3. Choose your file and add details<br>
+         4. Schedule or upload immediately</p>
+    </div>
+    <div class="info-card">
+      <i class="fas fa-clock"></i>
+      <h3>Scheduling</h3>
+      <p>Set your preferred upload time in WIB timezone. Your content will be automatically published at the scheduled time.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Facebook Media Uploader</h1>
+    <form id="uploadForm">
+      <div class="media-selection">
+        <button type="button" class="media-button active" data-type="reel">
+          <i class="fas fa-film media-icon"></i>
+          Reel
+        </button>
+        <button type="button" class="media-button" data-type="video">
+          <i class="fas fa-video media-icon"></i>
+          Video
+        </button>
+        <button type="button" class="media-button" data-type="image">
+          <i class="fas fa-image media-icon"></i>
+          Image
+        </button>
+      </div>
+      <div class="form-group">
+        <label for="pageId">Facebook Page ID</label>
+        <input type="text" id="pageId" required placeholder="Enter your Page ID">
+      </div>
+      <div class="form-group">
+        <label for="accessToken">Access Token</label>
+        <input type="text" id="accessToken" required placeholder="Enter your Access Token">
+      </div>
+      <div class="form-group">
+        <label for="mediaFile">Select File</label>
+        <input type="file" id="mediaFile" required>
+      </div>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" required placeholder="Enter title">
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" placeholder="Enter description"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="scheduleDateTime">Schedule Post (WIB)</label>
+        <input type="datetime-local" id="scheduleDateTime">
+      </div>
+      <button type="submit" id="uploadButton">Upload</button>
+    </form>
+    <div id="status" class="status"></div>
+  </div>
+  <footer class="footer">
+    <div class="author">Made with ♥️ by <a href="https://www.facebook.com/dafidxcode" target="_blank">Mas Davin</a></div>
+    <a href="https://saweria.co/dafidxcode" target="_blank" class="donate-btn">
+      <i class="fas fa-hand-holding-heart"></i> Donate
+    </a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
